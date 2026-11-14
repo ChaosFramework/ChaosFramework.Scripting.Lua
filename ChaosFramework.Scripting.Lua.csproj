@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Project Metadata -->
+  <PropertyGroup>
+    <AssemblyName>ChaosFramework.Scripting.Lua</AssemblyName>
+    <RootNamespace>ChaosFramework.Scripting.Lua</RootNamespace>
+    <ProjectGuid>{195966BA-B22B-445F-8F7B-BA5A37329BB1}</ProjectGuid>
+  </PropertyGroup>
+
+  <!-- Properties -->
+  <Import Project="$(SolutionDir)submodules/ChaosPresets.Targets/Properties/Common.targets" />
+  <Import Project="$(SolutionDir)submodules/ChaosPresets.Targets/Properties/OutputType/Library.targets" />
+
+  <!-- Configurations -->
+  <Import Project="$(SolutionDir)submodules/ChaosPresets.Targets/Configurations.targets" />
+
+  <!-- Included Files -->
+  <Import Project="$(SolutionDir)submodules/ChaosPresets.Targets/StandardResources.targets" />
+  <ItemGroup>
+    <Compile Include="source/**/*.cs" />
+    <None Include="License/**/*.txt" />
+  </ItemGroup>
+
+  <!-- References -->
+  <Import Project="$(SolutionDir)submodules/ChaosPresets.References/ProjectReferences/ChaosFramework.Components.targets" />
+  <Import Project="$(SolutionDir)submodules/ChaosPresets.References/ProjectReferences/ChaosFramework.Scripting.Lua.NLua.targets" />
+
+  <!-- Analyzers -->
+  <Import Project="$(SolutionDir)submodules/ChaosPresets.References/Analyzers/ChaosAnalyzers.CleanCode.targets" />
+
+  <!-- Build Tasks -->
+  <Import Project="$(SolutionDir)submodules/ChaosPresets.References/BuildTasks/ChaosBuild.CodeFormatter.Tasks.ChangedProjectFiles.targets" />
+
+</Project>
